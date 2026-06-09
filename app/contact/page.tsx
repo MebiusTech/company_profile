@@ -8,11 +8,11 @@ export default function ContactPage() {
         {/* Header section */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <span className="pixel-sticker bg-primary-container text-black">INBOX_INITIALIZED</span>
+            <span className="pixel-sticker bg-primary-container text-black">INBOX INITIALIZED</span>
             <span className="font-code text-sm">/root/contact/</span>
           </div>
           <h1 className="display-lg text-black text-shadow-hard uppercase">
-            ESTABLISH_LINK
+            ESTABLISH LINK
           </h1>
           <p className="body-lg text-gray-700 max-w-xl">
             Have a project, collaboration proposal, or technical question? Submit the form packets below, and our systems will process them.
@@ -25,25 +25,25 @@ export default function ContactPage() {
           {/* Form */}
           <div className="lg:col-span-2 neo-card">
             <div className="neo-card-header">
-              <span>[SUBMIT_PACKET] // CLIENT_FORM</span>
+              <span>[SUBMIT PACKET] // CLIENT FORM</span>
             </div>
             <div className="neo-card-body">
               <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="neo-input-wrapper">
-                    <label className="neo-label">sender_name:</label>
+                    <label className="neo-label">sender name:</label>
                     <input type="text" placeholder="John Doe" className="neo-input" required />
                   </div>
                   <div className="neo-input-wrapper">
-                    <label className="neo-label">sender_email:</label>
+                    <label className="neo-label">sender email:</label>
                     <input type="email" placeholder="john@company.com" className="neo-input" required />
                   </div>
                 </div>
 
                 <div className="neo-input-wrapper">
-                  <label className="neo-label">project_budget_range:</label>
+                  <label className="neo-label">project budget range:</label>
                   <select className="neo-input cursor-pointer" required>
-                    <option value="">&gt; select_range</option>
+                    <option value="">&gt; select range</option>
                     <option value="sm">&lt; $10k (Custom Utility Tooling)</option>
                     <option value="md">$10k - $30k (Corporate Website / Next.js app)</option>
                     <option value="lg">$30k - $100k (Full Custom Stack & Engine)</option>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="neo-input-wrapper">
-                  <label className="neo-label">system_requirements_specs:</label>
+                  <label className="neo-label">system requirements specs:</label>
                   <textarea 
                     rows={6} 
                     placeholder="Provide detailed information regarding the features and performance requirements of the system to build..." 
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
                 <div>
                   <button type="submit" className="neo-btn w-full md:w-auto">
-                    transmit_inquiry.sh
+                    transmit inquiry.sh
                   </button>
                 </div>
               </form>
@@ -75,7 +75,7 @@ export default function ContactPage() {
             
             <div className="neo-card">
               <div className="neo-card-header bg-secondary">
-                <span>[DIRECT_CHANNELS]</span>
+                <span>[DIRECT CHANNELS]</span>
               </div>
               <div className="neo-card-body flex flex-col gap-6">
                 <div>
@@ -97,21 +97,21 @@ export default function ContactPage() {
 
             <div className="neo-card">
               <div className="neo-card-header bg-tertiary">
-                <span>[SYSTEM_METRICS]</span>
+                <span>[SYSTEM METRICS]</span>
               </div>
               <div className="neo-card-body">
                 <table className="w-full text-left font-code text-sm">
                   <tbody>
                     <tr className="border-b border-gray-300">
-                      <td className="py-2 font-bold">AVG_RESPONSE:</td>
+                      <td className="py-2 font-bold">AVG RESPONSE:</td>
                       <td className="py-2 text-right text-secondary">&lt; 12 Hours</td>
                     </tr>
                     <tr className="border-b border-gray-300">
-                      <td className="py-2 font-bold">SLOTS_Q3:</td>
+                      <td className="py-2 font-bold">SLOTS Q3:</td>
                       <td className="py-2 text-right text-green-700">2 Available</td>
                     </tr>
                     <tr>
-                      <td className="py-2 font-bold">LABS_STATUS:</td>
+                      <td className="py-2 font-bold">LABS STATUS:</td>
                       <td className="py-2 text-right text-blue-accent font-bold">OPERATIONAL</td>
                     </tr>
                   </tbody>

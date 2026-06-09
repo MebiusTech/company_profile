@@ -60,19 +60,17 @@ export default function Home() {
     <div className="flex-1 pixel-grid py-16 px-6 md:px-12">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-20">
         
-        {/* HERO SECTION */}
         <section className="relative flex flex-col gap-8 pt-8">
-          {/* Background layered card frame breaking the grid */}
-          <div className="absolute right-0 top-0 w-72 h-72 bg-secondary-fixed opacity-10 hidden lg:block -z-10 transform rotate-6 neo-border" />
+          <div className="absolute right-0 top-0 w-72 h-72 bg-secondary opacity-20 hidden lg:block -z-10 transform rotate-6 neo-border" />
           
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <span className="pixel-sticker bg-primary-container text-black">SYSTEM_ONLINE</span>
-              <span className="font-code text-sm text-gray-800">// welcome_to_mebius_labs</span>
+              <span className="pixel-sticker bg-primary-container text-black">SYSTEM ONLINE</span>
+              <span className="font-code text-sm text-gray-800">Welcome to Mebius Labs</span>
             </div>
             
             <h1 className="display-lg text-black text-shadow-hard uppercase">
-              WE BUILD <span className="text-outlined">CREATIVE AND FUNCTIONAL</span> DIGITAL SYSTEMS.
+              <span className="highlight-red">SOLUSI</span> TEKNOLOGI <span className="text-outlined">TEPAT GUNA</span> UNTUK BISNIS MODERN
             </h1>
           </div>
 
@@ -82,64 +80,56 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="neo-btn">
-              Initailize project with us now
+              Initialize project with us now
             </Link>
             <Link href="/projects" className="neo-btn neo-btn-secondary">
               Read our successful project
             </Link>
           </div>
-
-          {/* Decorative Brackets Badge */}
-          <div className="absolute top-1/2 right-12 text-gray-300 font-display font-black text-9xl hidden xl:block -z-20 transform -translate-y-1/2">
-            {"{...}"}
-          </div>
         </section>
 
-        {/* INTERACTIVE TECH TERMINAL */}
         <section className="flex flex-col gap-6">
           <div className="flex justify-between items-center">
-            <h2 className="headline-md text-black">[PLAYGROUND_TERMINAL.EXE]</h2>
+            <h2 className="headline-md text-black">PLAYGROUND TERMINAL</h2>
             <div className="hidden sm:flex gap-1.5">
               <span className="pixel-sticker bg-primary-container text-black">JS_REACT</span>
-              <span className="pixel-sticker bg-secondary-fixed text-black">NEXTJS_16</span>
+              <span className="pixel-sticker bg-secondary-fixed-dim text-black">NEXTJS_16</span>
             </div>
           </div>
 
           <div className="neo-card bg-white">
-            {/* Terminal Window Header */}
-            <div className="neo-card-header bg-[#303030] flex justify-between items-center">
+            <div className="neo-card-header flex justify-between items-center bg-[#303030]">
               <div className="flex items-center gap-3">
                 <div className="flex gap-1.5">
-                  <span className="w-3 h-3 rounded-full bg-[#ba1a1a] block" />
-                  <span className="w-3 h-3 rounded-full bg-[#ffd7f0] block" />
-                  <span className="w-3 h-3 rounded-full bg-[#c9f300] block" />
+                  <span className="w-3 h-3 rounded-full bg-[#ba1a1a] block neo-border border-2" />
+                  <span className="w-3 h-3 rounded-full bg-[#ffd7f0] block neo-border border-2" />
+                  <span className="w-3 h-3 rounded-full bg-[#c9f300] block neo-border border-2" />
                 </div>
-                <span className="font-code text-sm">terminal_session_0284.sh</span>
+                <span className="font-code text-sm">Terminal Session</span>
               </div>
               <div className="flex gap-2">
                 <button 
                   onClick={() => setTerminalTab("wasm")} 
                   className={`font-code text-xs px-3 py-1 neo-border border-[1px] cursor-pointer ${terminalTab === "wasm" ? "bg-primary-container text-black" : "bg-white text-black"}`}
                 >
-                  wasm_compile.go
+                  WASM Compile
                 </button>
                 <button 
                   onClick={() => setTerminalTab("seo")} 
                   className={`font-code text-xs px-3 py-1 neo-border border-[1px] cursor-pointer ${terminalTab === "seo" ? "bg-primary-container text-black" : "bg-white text-black"}`}
                 >
-                  seo_audit.json
+                  SEO Audit
                 </button>
                 <button 
                   onClick={() => setTerminalTab("brutal")} 
                   className={`font-code text-xs px-3 py-1 neo-border border-[1px] cursor-pointer ${terminalTab === "brutal" ? "bg-primary-container text-black" : "bg-white text-black"}`}
                 >
-                  visual_spec.css
+                  Visual Spec
                 </button>
               </div>
             </div>
-            {/* Terminal Window Body */}
             <div className="neo-card-body p-0">
-              <pre className="neo-codeblock w-full border-0 m-0 box-shadow-none overflow-x-auto min-h-[160px]">
+              <pre className="neo-codeblock w-full m-0 box-shadow-none overflow-x-auto min-h-[160px]">
                 <code>
                   {getTerminalContent()}
                 </code>
@@ -148,19 +138,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CAPABILITIES / FEATURES GRID */}
         <section className="flex flex-col gap-10">
           <div className="flex flex-col gap-4">
-            <span className="pixel-sticker bg-secondary text-white w-max">CORE_CAPABILITIES</span>
-            <h2 className="headline-lg text-black uppercase">SYSTEM_CAPABILITIES</h2>
+            <span className="pixel-sticker bg-secondary text-white w-max">CORE CAPABILITIES</span>
+            <h2 className="headline-lg text-black uppercase">SYSTEM CAPABILITIES</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="neo-card neo-card-interactive">
-              <div className="neo-card-header bg-secondary">
-                <span>[01] // BRAND_WARFARE</span>
-                <span>{"<>"}</span>
+              <div className="neo-card-header">
+                <span>01 - BRAND WARFARE</span>
               </div>
               <div className="neo-card-body flex flex-col justify-between gap-6">
                 <div>
@@ -176,11 +163,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="neo-card neo-card-interactive">
-              <div className="neo-card-header">
-                <span>[02] // PERFORMANCE_OPS</span>
-                <span>{"{}"}</span>
+              <div className="neo-card-header neo-card-header-pink">
+                <span>02 - PERFORMANCE OPS</span>
               </div>
               <div className="neo-card-body flex flex-col justify-between gap-6">
                 <div>
@@ -196,11 +181,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="neo-card neo-card-interactive">
-              <div className="neo-card-header bg-tertiary">
-                <span>[03] // OFFLINE_FIRST</span>
-                <span>{"[]"}</span>
+              <div className="neo-card-header neo-card-header-orange">
+                <span>03 - OFFLINE FIRST</span>
               </div>
               <div className="neo-card-body flex flex-col justify-between gap-6">
                 <div>
@@ -218,28 +201,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* INPUT FORM PREVIEW */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white neo-border p-8 md:p-12 relative">
-          <div className="absolute top-4 right-4 text-xs font-code text-gray-400">
-            [CONN_CHECK: OK]
-          </div>
-
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white neo-border p-8 md:p-12 relative neo-shadow-lg">
           <div className="flex flex-col gap-4">
-            <span className="pixel-sticker bg-primary-container text-black w-max">CONNECT_PACKETS</span>
-            <h2 className="headline-lg text-black uppercase">INITIALIZE CONTACT_</h2>
+            <span className="pixel-sticker bg-primary-container text-black w-max">CONNECT PACKETS</span>
+            <h2 className="headline-lg text-black uppercase">INITIALIZE CONTACT</h2>
             <p className="body-md text-gray-700 max-w-md">
               Fill in your communication packet details. Test our custom Neo-Brutalist input field system below. Active states react physically to user focus.
             </p>
           </div>
 
-          <div className="neo-card bg-[#f9f9f9]">
+          <div className="neo-card bg-[var(--surface)]">
             <div className="neo-card-header bg-[#303030]">
-              <span>[QUICK_INQUIRY.EXE]</span>
+              <span>QUICK INQUIRY</span>
             </div>
             <div className="neo-card-body">
               <form onSubmit={handleInquirySubmit} className="flex flex-col gap-4">
                 <div className="neo-input-wrapper">
-                  <label className="neo-label">your_signature:</label>
+                  <label className="neo-label">Your Signature:</label>
                   <input 
                     type="text" 
                     value={inquiryName}
@@ -250,11 +228,11 @@ export default function Home() {
                   />
                 </div>
                 <button type="submit" className="neo-btn w-full">
-                  {isSent ? "transmitting..." : "submit_signature.sh"}
+                  {isSent ? "Transmitting..." : "Submit Signature"}
                 </button>
                 {isSent && (
-                  <p className="font-code text-xs text-[#a90097] text-center mt-2 animate-pulse">
-                    &gt; PACKET SUCCESSFULLY BROADCASTED
+                  <p className="font-code text-xs text-secondary text-center mt-2 animate-pulse">
+                    Packet successfully broadcasted
                   </p>
                 )}
               </form>

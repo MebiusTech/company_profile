@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmokeyCursor from "@/components/SmokeyCursor";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -39,8 +40,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${bricolage.variable} ${hanken.variable} ${jetbrains.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-[#f9f9f9] text-[#1b1b1b] overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-[#f9f9f9] text-[#1b1b1b] overflow-x-hidden" suppressHydrationWarning>
+        <SmokeyCursor />
         <Navbar />
         <main className="flex-1 flex flex-col mt-24">{children}</main>
         <Footer />

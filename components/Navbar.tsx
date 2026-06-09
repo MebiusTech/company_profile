@@ -3,16 +3,21 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogoGlitching, setIsLogoGlitching] = useState(false);
+
+  const handleLogoClick = () => {
+    setIsLogoGlitching(true);
+    setTimeout(() => setIsLogoGlitching(false), 500); // Glitch for 0.5 seconds
+  };
 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
-    { name: "Blog", href: "/blog" },
+    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -20,20 +25,12 @@ export default function Navbar() {
   return (
     <header className="neo-nav">
       {/* Brand Logo */}
-      <Link href="/" className="flex items-center gap-2 text-decoration-none">
-      <Image
-        src="/logonobg.png"
-        alt="Mebius Tech Logo"
-        width={1536}
-        height={1024}
-        className="w-auto h-10 md:h-12 lg:h-14 object-contain"
-        priority
-      />
+      <Link href="/" className="flex items-center gap-2 text-decoration-none" onClick={handleLogoClick}>
         <span 
-          className="font-display font-black text-xl md:text-2xl text-black hover:text-outlined"
+          className={`font-display font-black text-xl md:text-2xl text-black hover:text-outlined ${isLogoGlitching ? 'glitch-on-click' : ''}`}
           style={{ letterSpacing: "-0.02em" }}
         >
-          MEBIUS_TECH<span className="text-secondary font-code text-lg ml-1">{"{}"}</span>
+          MEBIUS TECH
         </span>
       </Link>
 
@@ -47,7 +44,7 @@ export default function Navbar() {
               href={link.href}
               className={`neo-nav-link ${isActive ? "neo-nav-link-active" : ""}`}
             >
-              /{link.name.toLowerCase()}
+              {link.name}
             </Link>
           );
         })}
@@ -79,7 +76,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`neo-nav-link text-center w-full ${isActive ? "neo-nav-link-active" : ""}`}
               >
-                /{link.name.toLowerCase()}
+                {link.name}
               </Link>
             );
           })}

@@ -7,13 +7,13 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="flex flex-col gap-4">
           <h3 className="font-display font-black text-2xl text-black">
-            MEBIUS_TECH<span className="text-secondary font-code text-base ml-1">{"</>"}</span>
+            MEBIUS TECH
           </h3>
           <p className="body-md text-gray-700 max-w-sm">
             Merging raw, unpolished Neo-Brutalist energy with modern, state-of-the-art software craftsmanship.
           </p>
           <div className="flex gap-2">
-            <span className="pixel-sticker bg-primary-container text-black">SYSTEM_ACTIVE</span>
+            <span className="pixel-sticker bg-primary-container text-black">SYSTEM ACTIVE</span>
             <span className="pixel-sticker bg-secondary-fixed text-black">v1.0.0</span>
           </div>
         </div>
@@ -21,20 +21,20 @@ export default function Footer() {
         {/* Navigation Quick Links */}
         <div className="flex flex-col gap-3">
           <h4 className="font-code font-bold uppercase text-black text-sm tracking-wider">
-            [DIRECTORY]
+            DIRECTORY
           </h4>
           <div className="flex flex-col gap-2">
             <Link href="/" className="font-code text-sm text-gray-800 hover:text-secondary hover:underline transition-all">
-              &gt; home.sh
+              Home
             </Link>
             <Link href="/projects" className="font-code text-sm text-gray-800 hover:text-secondary hover:underline transition-all">
-              &gt; projects_showcase.bin
+              Projects
             </Link>
-            <Link href="/blog" className="font-code text-sm text-gray-800 hover:text-secondary hover:underline transition-all">
-              &gt; blog_articles.txt
+            <Link href="/services" className="font-code text-sm text-gray-800 hover:text-secondary hover:underline transition-all">
+              Services
             </Link>
             <Link href="/about" className="font-code text-sm text-gray-800 hover:text-secondary hover:underline transition-all">
-              &gt; info_about_us.conf
+              About
             </Link>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
         {/* contact and social */}
         <div className="flex flex-col gap-3">
           <h4 className="font-code font-bold uppercase text-black text-sm tracking-wider">
-            [CONNECT]
+            CONNECT
           </h4>
           <p className="body-md text-gray-700">
             Email: <span className="font-code text-sm">hello@mebius.tech</span>
@@ -52,13 +52,13 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 mt-2 font-code text-sm font-bold">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">
-              GITHUB_
+              Github
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">
-              TWITTER_
+              Twitter
             </a>
             <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">
-              DISCORD_
+              Discord
             </a>
           </div>
         </div>
@@ -66,10 +66,10 @@ export default function Footer() {
 
       <div className="max-w-[1280px] mx-auto border-t-2 border-black mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <span className="font-code text-xs text-gray-600">
-          © {new Date().getFullYear()} MEBIUS_TECH. ALL CODE IS OPEN-SOURCE.
+          © {new Date().getFullYear()} MEBIUS TECH. ALL CODE IS OPEN-SOURCE.
         </span>
         <span className="font-code text-xs text-gray-500">
-          [STAMP: {new Date().toISOString().split('T')[0]} - PROD]
+          Updated: {new Date().toISOString().split('T')[0]}
         </span>
       </div>
     </footer>

@@ -1,96 +1,119 @@
-export default function AboutPage() {
-  const philosophies = [
-    {
-      title: "01. UNCOMPROMISING CONTRAST",
-      desc: "No subtle grey-on-grey lines. The internet is built on pixels, we make them stand out with heavy black lines and aggressive offsets.",
-    },
-    {
-      title: "02. LOCAL-FIRST ENGINEERING",
-      desc: "We prioritize local state databases, offline-capable code execution, and high-performance WebAssembly architectures.",
-    },
-    {
-      title: "03. STRUCTURAL TRANSPARENCY",
-      desc: "Our designs do not hide their framework. Brackets, grids, and technical code stamps are styled proudly on the screen.",
-    },
-  ];
+import Link from "next/link";
 
+export default function AboutPage() {
   return (
     <div className="flex-1 pixel-grid py-12 px-6 md:px-12">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-10">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-16">
         
         {/* Header section */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <span className="pixel-sticker bg-tertiary text-white">SYS_INFO</span>
-            <span className="font-code text-sm">/root/about/</span>
+            <span className="pixel-sticker bg-secondary text-white">SYS INFO</span>
+            <span className="font-code text-sm">About Us</span>
           </div>
           <h1 className="display-lg text-black text-shadow-hard uppercase">
-            AGENCY_MANIFESTO
+            TENTANG KAMI
           </h1>
-          <p className="body-lg text-gray-700 max-w-xl">
-            Mebius Tech is a high-octane engineering lab and creative development studio. We build websites and custom webapps for teams that demand design authority and speed.
+          <p className="body-lg text-gray-700 max-w-2xl">
+            Mebius Tech adalah studio pengembangan kreatif dan laboratorium rekayasa teknologi tinggi. Kami membangun ekosistem digital untuk tim yang menuntut kecepatan dan otoritas desain.
           </p>
         </div>
 
-        {/* Philosophy Cards Grid */}
-        <div className="flex flex-col gap-6">
-          <h2 className="headline-lg text-black mb-2">[OUR_VALUES]</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {philosophies.map((phil, idx) => (
-              <div key={idx} className="neo-card bg-white">
-                <div className="neo-card-header bg-[#303030]">
-                  <span>CORE_RULE_0{idx + 1}</span>
-                </div>
-                <div className="neo-card-body flex flex-col gap-4">
-                  <h3 className="headline-md text-black">{phil.title}</h3>
-                  <p className="body-md text-gray-600">{phil.desc}</p>
-                </div>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Visi */}
+          <div className="neo-card">
+            <div className="neo-card-header bg-primary">
+              <span>VISI</span>
+            </div>
+            <div className="neo-card-body">
+              <h3 className="headline-md text-black mb-3">DIGITAL FRONTIER</h3>
+              <p className="body-md text-gray-700">
+                Menjadi pionir dalam menghadirkan solusi teknologi yang unapologetic, berkinerja tinggi, dan mendobrak batasan desain konvensional di era modern.
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Technical Specs section */}
-        <div className="neo-card bg-[#f3f3f3]">
-          <div className="neo-card-header bg-secondary">
-            <span>[HARDWARE_SOFTWARE_SPECS]</span>
-          </div>
-          <div className="neo-card-body">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="headline-md text-black mb-4">DESIGN SYSTEM CODEBASE</h4>
-                <p className="body-md text-gray-700 mb-4">
-                  Our websites run on a strict mathematical 8px grid canvas. All layout columns, gutters, and box sizes map back to binary numbers.
-                </p>
-                <div className="neo-codeblock">
-                  <span className="code-comment">// Mebius Coordinate System</span><br />
-                  <span className="code-keyword">const</span> GRID_UNIT = <span className="code-string">8</span>;<br />
-                  <span className="code-keyword">const</span> BORDER_WIDTH = <span className="code-string">3</span>;<br />
-                  <span className="code-keyword">const</span> SHADOW_OFFSET = <span className="code-string">8</span>;<br />
-                  <span className="code-keyword">const</span> activeTransform = (x) =&gt; <span className="code-function">`translate(${"${x}"}px, ${"${x}"}px)`</span>;
-                </div>
-              </div>
-              <div>
-                <h4 className="headline-md text-black mb-4">ENGINEERING STACK</h4>
-                <ul className="list-none p-0 flex flex-col gap-3 font-code text-sm">
-                  <li className="p-2 bg-white neo-border border-[1px]">
-                    <span className="text-secondary font-bold">[01]</span> Next.js 16 (App Architecture)
-                  </li>
-                  <li className="p-2 bg-white neo-border border-[1px]">
-                    <span className="text-secondary font-bold">[02]</span> React 19 (Async Transitions)
-                  </li>
-                  <li className="p-2 bg-white neo-border border-[1px]">
-                    <span className="text-secondary font-bold">[03]</span> TypeScript (Type-Safe Actions)
-                  </li>
-                  <li className="p-2 bg-white neo-border border-[1px]">
-                    <span className="text-secondary font-bold">[04]</span> WebAssembly (Compute Boosts)
-                  </li>
-                </ul>
-              </div>
+          {/* Misi */}
+          <div className="neo-card">
+            <div className="neo-card-header bg-secondary">
+              <span>MISI</span>
+            </div>
+            <div className="neo-card-body">
+              <ul className="body-md text-gray-700 flex flex-col gap-2 list-disc pl-4">
+                <li>Mengembangkan produk web dengan kecepatan sub-detik (zero bloat).</li>
+                <li>Menerapkan desain Neo-Brutalism yang fungsional dan berani.</li>
+                <li>Memberikan kode sumber yang transparan, terstruktur, dan mudah dikelola.</li>
+              </ul>
             </div>
           </div>
         </div>
 
+        {/* Sejarah */}
+        <div className="neo-card bg-white">
+          <div className="neo-card-header bg-[#303030]">
+            <span>SEJARAH SINGKAT</span>
+          </div>
+          <div className="neo-card-body">
+            <p className="body-md text-gray-700 leading-relaxed">
+              Didirikan pada awal 2024 di "Arcade Room #32", Mebius Tech bermula dari sekumpulan engineer dan desainer yang bosan dengan tampilan web yang terlalu bersih dan membosankan (soft UI). Kami bereksperimen dengan desain kontras tinggi yang digabung dengan optimasi arsitektur mutakhir. Hari ini, kami membantu berbagai bisnis dan enterprise membangun produk yang fungsional dan mustahil untuk diabaikan.
+            </p>
+          </div>
+        </div>
+
+        {/* Tim Inti */}
+        <div className="flex flex-col gap-6">
+          <h2 className="headline-lg text-black uppercase">PROFIL TIM INTI</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Member 1 */}
+            <div className="neo-card neo-card-interactive">
+              <div className="neo-card-header bg-primary-container text-black">
+                <span>CEO & ARCHITECT</span>
+              </div>
+              <div className="neo-card-body flex flex-col items-center text-center gap-4">
+                <div className="unusual-frame">
+                  <div className="ascii-face ascii-face-1"></div>
+                </div>
+                <div>
+                  <h4 className="headline-md text-black">ALEX "VOID" R.</h4>
+                </div>
+                <p className="body-md text-gray-700">Mantan insinyur DevOps yang beralih menjadi pendiri studio. Terobsesi dengan performa sistem dan arsitektur database berskala besar.</p>
+              </div>
+            </div>
+
+            {/* Member 2 */}
+            <div className="neo-card neo-card-interactive">
+              <div className="neo-card-header bg-secondary-fixed-dim text-black">
+                <span>CTO & LEAD ENGINEER</span>
+              </div>
+              <div className="neo-card-body flex flex-col items-center text-center gap-4">
+                <div className="unusual-frame">
+                  <div className="ascii-face ascii-face-2"></div>
+                </div>
+                <div>
+                  <h4 className="headline-md text-black">SARAH "GLITCH" W.</h4>
+                </div>
+                <p className="body-md text-gray-700">Pakar Frontend dan desain interaksi. Memastikan setiap baris kode berjalan mulus serta membenci gradien lembut tanpa fungsi.</p>
+              </div>
+            </div>
+
+            {/* Member 3 */}
+            <div className="neo-card neo-card-interactive">
+              <div className="neo-card-header bg-tertiary-fixed-dim text-black">
+                <span>CDO & CREATIVE HEAD</span>
+              </div>
+              <div className="neo-card-body flex flex-col items-center text-center gap-4">
+                <div className="unusual-frame">
+                  <div className="ascii-face ascii-face-3"></div>
+                </div>
+                <div>
+                  <h4 className="headline-md text-black">MAX "NULL" T.</h4>
+                </div>
+                <p className="body-md text-gray-700">Arsitek visual yang membawa gaya Neo-Brutalism ke level berikutnya. Menghancurkan aturan UI konvensional demi estetika mentah.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
