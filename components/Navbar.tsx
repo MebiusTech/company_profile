@@ -48,7 +48,7 @@ export default function Navbar() {
               href={link.href}
               className={`neo-nav-link ${isActive ? "neo-nav-link-active" : ""}`}
             >
-              /{link.name.toLowerCase()}
+              {link.name.toLowerCase()}
             </Link>
           );
         })}

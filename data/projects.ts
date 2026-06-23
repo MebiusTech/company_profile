@@ -45,9 +45,9 @@ export const projectsData: Record<string, ProjectDetail> = {
     tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
     headerColor: 'bg-tertiary',
     type: 'Web Application',
-    image: '/projects/portag/1.png',
+    image: '/projects/portag/1.PNG',
     fullDescription: 'Sebuah sistem inventaris seragam berbasis web yang dirancang khusus untuk sekolah. Sistem ini memudahkan pengelolaan stok seragam, distribusi kepada siswa, dan pelacakan penggunaan seragam secara efisien.',
-    images: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png']
+    images: ['1.PNG', '2.PNG', '3.PNG', '4.PNG', '5.PNG', '6.PNG', '7.PNG', '8.PNG', '9.PNG']
   },
   
 };

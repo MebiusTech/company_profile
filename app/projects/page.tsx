@@ -17,7 +17,7 @@ export default function ProjectsPage() {
             SELECTED WORKS
           </h1>
           <p className="body-lg text-gray-700 max-w-xl">
-            A listing of our high-voltage builds and developer systems. We build tools that break boundaries and look loud.
+            Here are some of the projects We've worked on, showcasing my skills and experience in various areas of development. Each project highlights my ability to create innovative solutions and deliver high-quality results.
           </p>
         </div>
 
